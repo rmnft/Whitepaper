@@ -54,7 +54,7 @@ img {
 
 canvas {
     width: 100%;
-    max-width: 10px; /* Set a max-width that fits your layout */
-    height: auto; /* Maintain aspect ratio */
-    margin: auto; /* Center the canvas if it's smaller than the container */
+    max-width: 600px; /* Suitable max-width */
+    margin: auto; /* Center the canvas */
 }
+

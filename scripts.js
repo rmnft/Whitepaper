@@ -13,36 +13,28 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false, // Add this line to maintain aspect ratio
                 plugins: {
                     legend: {
                         position: 'top',
                     },
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false,
-                    },
                     datalabels: {
                         color: '#fff',
-                        anchor: 'end',
-                        align: 'start',
-                        offset: -10,
-                        borderRadius: 25,
-                        backgroundColor: (context) => {
-                            return context.dataset.backgroundColor[context.dataIndex];
+                        display: function(context) {
+                            return context.dataset.data[context.dataIndex] > 0; // Add this function to display data labels conditionally
+                        },
+                        font: {
+                            weight: 'bold'
                         },
                         formatter: (value, context) => {
-                            let sum = 0;
-                            let dataArr = context.dataset.data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(2)+"%";
+                            let sum = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                            let percentage = (value / sum * 100).toFixed(2) + '%';
                             return percentage;
                         }
                     }
                 }
             },
-            plugins: [ChartDataLabels]
+            plugins: [ChartDataLabels] // Make sure this plugin is included
         });
     }
 });
