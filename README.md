@@ -1,9 +1,10 @@
 # FUMO COIN Whitepaper
 
 ```html
-<link rel="stylesheet" href="https://github.com/rmnft/Whitepaper/blob/main/styles.css">
-<script src="https://github.com/rmnft/Whitepaper/blob/main/scripts.js"></script>
-
+<link rel="stylesheet" type="text/css" href="https://rmnft.github.io/Whitepaper/styles.css">
+<script src="https://rmnft.github.io/Whitepaper/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 ```
 
 
