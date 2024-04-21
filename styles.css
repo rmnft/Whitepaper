@@ -44,16 +44,17 @@ p, li {
     text-align: justify;
 }
 
-canvas {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Adjust based on your preference */
-}
-
 img {
     width: 100%; /* Responsive image size */
     height: auto; /* Maintain aspect ratio */
     margin-top: 10px; /* Space between text and image */
     border-radius: 5px; /* Optional: rounded corners for images */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: add shadow for depth */
+}
+
+canvas {
+    width: 100%;
+    max-width: 10px; /* Set a max-width that fits your layout */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center the canvas if it's smaller than the container */
 }
